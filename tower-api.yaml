@@ -1,0 +1,20 @@
+---
+- name: Tower API
+  hosts: localhost
+  become: false
+  vars:
+    tower_user: admin
+    tower_pass: password
+    tower_host: tower.example.com
+    tower_job: Demo%20Job%20Template
+  tasks:
+  - name: launch a tower job
+    uri:
+      uri: https://{{ tower_host }}/api/v2/job_templates/{{ tower_job }}/launch/
+      method: POST
+      validate_certs: no
+      return_content: yes
+      user: "{{ tower_user }}"
+      password: "{{ tower_pass }}"
+      force_basic_auth: yes
+      status_code: 201
