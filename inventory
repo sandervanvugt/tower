@@ -1,3 +1,7 @@
+[rocky]
 ansible1
 ansible2
 ansible3
+
+[ubuntu]
+ubuntu
