@@ -1,0 +1,8 @@
+---
+- name: create directory
+  hosts: ansible1
+  tasks:
+  - file:
+      path: "{{ username }}dir"
+      owner: "{{ username }}"
+      state: directory
