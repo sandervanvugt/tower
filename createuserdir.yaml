@@ -1,8 +1,0 @@
----
-- name: create userdir
-  hosts: ansible1
-  tasks:
-  - file:
-      path: "{{ username }}dir"
-      owner: "{{ username }}"
-      state: directory

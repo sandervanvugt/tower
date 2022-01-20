@@ -1,6 +1,0 @@
----
-- name: failure message
-  hosts: localhost
-  tasks:
-  - debug:
-      msg: failed to create {{ username }}
