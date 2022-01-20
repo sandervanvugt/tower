@@ -5,3 +5,4 @@
   - file:
       path: "{{ username }}dir"
       owner: "{{ username }}"
+      state: directory
