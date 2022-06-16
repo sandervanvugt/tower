@@ -1,0 +1,8 @@
+---
+- name: create users
+  hosts: ansible1
+  tasks:
+  - name: create user
+    user:
+      name: "{{ username }}"
+      password: "{{ password }}"

@@ -1,7 +1,7 @@
 ---
 - name: install start and enable httpd
   gather_facts: false
-  hosts: rocky
+  hosts: ansible1
   tasks:
   - name: install package
     package:
