@@ -19,4 +19,4 @@
   tasks:
   - name: test httpd access
     uri:
-      url: http://rocky
+      url: http://ansible1
