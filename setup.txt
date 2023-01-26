@@ -1,0 +1,6 @@
+prepare a virtual machine running Ubuntu Workstation LTS (recent version) with the following specs:
+*	8 GB RAM
+*	4 vCPUs
+*	40 GB disk space
+
+
