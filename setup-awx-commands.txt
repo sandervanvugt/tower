@@ -1,0 +1,17 @@
+minikube start --cpus=4 --memory=6g --addons=ingress --vm-driver=docker
+curl -s "https://raw.githubusercontent.com/kubernetes-sigs/kustomize/master/hack/install_kustomize.sh" | bash
+sudo mv kustomize /usr/local/bin/
+vim kustomization.yaml 
+kustomize build . | kubectl apply -f -
+kubectl get pods -n awx
+kubectl config set-context --current --namespace=awx
+vim awx-demo.yaml 
+vim kustomization.yaml 
+kustomize build . | kubectl apply -f -
+kubectl get pods,svc
+sleep 180; kubectl get pods
+kubectl get pods
+minikube service -n awx awx-demo-service --url
+kubectl get secret awx-demo-admin-password -o jsonpath="{.data.password}" | base64 --decode
+history
+
